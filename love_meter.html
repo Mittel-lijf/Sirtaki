@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Meter</title>
+    <link rel="stylesheet" type="text/css" href="love_meter.css">
+</head>
+<body>
+    <h1>Love Meter</h1>
+    <!--
+        Love Meter Calculation Instructions:
+        - This page contains a form that collects two names.
+        - Upon submission, the form sends the data via POST to love_meter_process.php.
+        - The love_meter_process.php file is responsible for processing the inputs,
+          calculating a love percentage (using a predetermined algorithm or random logic),
+          and then displaying the result back to the user.
+        - Developers can adjust the algorithm or sanitation methods in love_meter_process.php
+          as needed.
+    -->
+    <form action="love_meter_process.php" method="post">
+        <div>
+            <label for="name1">First Name:</label>
+            <input type="text" id="name1" name="name1" required>
+        </div>
+        <div>
+            <label for="name2">Second Name:</label>
+            <input type="text" id="name2" name="name2" required>
+        </div>
+        <div>
+            <button type="submit">Calculate Love Percentage</button>
+        </div>
+    </form>
+    <section id="result">
+        <!-- The computed love percentage will be displayed here after processing -->
+    </section>
+</body>
+</html>
